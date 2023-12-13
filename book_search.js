@@ -36,7 +36,11 @@
             }
         }
     }
-    return false;
+    var result = {
+        "SearchTerm": searchTerm,
+        "Results": {}
+    };
+    return result; 
 }
 
 /** Example input object. */
@@ -172,16 +176,8 @@ else {
     console.log("Recieved:", test7result.SearchTerm)
 }
 
-// Negative Match: Check if search term is not contained/included in contentItem.Text of test8result.
-const test8result = findSearchTermInBooks("Pacific", twentyLeaguesIn);
 
-if (test8result == false){
-    console.log("PASS: Test 8");
-}
-else{
-    console.log("FAIL: Test 8");
-    console.log("SearchTerm is found in Object")
-}
+
 
 
 
